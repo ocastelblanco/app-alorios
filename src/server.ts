@@ -1,3 +1,6 @@
+import 'zone.js/node';
+import { renderApplication } from '@angular/platform-server';
+import AppServerModule from './main.server';
 import {
   AngularNodeAppEngine,
   createNodeRequestHandler,
@@ -64,3 +67,18 @@ if (isMainModule(import.meta.url)) {
  * The request handler used by the Angular CLI (dev-server and during build).
  */
 export const reqHandler = createNodeRequestHandler(app);
+
+export const handler = async (event: any, context: any) => {
+  const url = event.rawPath || '/';
+  const html = await renderApplication(AppServerModule, {
+    url,
+    document: '<apl-root></apl-root>',
+    platformProviders: [],
+  });
+
+  return {
+    statusCode: 200,
+    headers: { 'Content-Type': 'text/html' },
+    body: html,
+  };
+};

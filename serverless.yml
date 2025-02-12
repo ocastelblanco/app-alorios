@@ -1,0 +1,19 @@
+service: app-alorios
+
+frameworkVersion: "4"
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  region: us-east-1
+
+functions:
+  app:
+    handler: dist/app-alorios/server/server.handler
+    events:
+      - httpApi: "*"
+
+package:
+  individually: true
+  include:
+    - dist/**
