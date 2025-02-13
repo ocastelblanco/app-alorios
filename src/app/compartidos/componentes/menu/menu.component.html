@@ -1,0 +1,7 @@
+<div class="menu">
+  <apl-menu-perfil />
+  @for (item of items; track $index) {
+  <apl-menu-boton [item]="item"
+                  [actual]="actualLink === item.vinculo" />
+  }
+</div>

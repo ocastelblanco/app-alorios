@@ -1,0 +1,17 @@
+<a [routerLink]="item.vinculo"
+   [ngClass]="{'actual': actual}"
+   class="vinculo flex align-items-center">
+  <div class="icono">
+    @if (item.tipo === 'material') {
+    <span class="material-symbols-rounded text-3xl"
+          [innerHTML]="item.icono">
+    </span>
+    }
+    @if (item.tipo === 'fontawesome') {
+    <i [class]="item.icono + ' text-2xl'"></i>
+    }
+  </div>
+  <span class="texto text-xl"
+        [innerHTML]="item.nombre">
+  </span>
+</a>

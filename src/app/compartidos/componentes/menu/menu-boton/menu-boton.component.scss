@@ -1,0 +1,30 @@
+.vinculo {
+  padding: 0;
+  border-radius: 16px;
+  text-decoration: none;
+  color: var(--p-highlight-color);
+  .icono {
+    padding: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--p-highlight-background);
+    color: var(--p-highlight-color);
+  }
+  .texto {
+    padding: 0 1em;
+  }
+  &.actual {
+    background-color: var(--p-primary-400);
+    .icono {
+      background-color: var(--p-primary-800);
+      color: var(--p-surface-0);
+    }
+    .texto {
+      color: var(--p-primary-contrast-color);
+    }
+  }
+}

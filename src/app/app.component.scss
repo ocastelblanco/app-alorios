@@ -1,0 +1,12 @@
+$margen: 16px;
+$radio: $margen * 2;
+.componente {
+  width: calc(100vw - ($margen * 2));
+  height: calc(100vh - ($margen * 2));
+  position: relative;
+  margin: $margen;
+  padding: $margen;
+  border-radius: $radio;
+  overflow: hidden;
+  box-shadow: 0 8px 32px #1f26875e;
+}

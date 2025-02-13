@@ -1,2 +1,11 @@
-<h1>AppAlorios</h1>
-<router-outlet></router-outlet>
+<div apl-fondo-animado
+     class="componente">
+  <div class="h-full">
+    <apl-menu></apl-menu>
+  </div>
+  <div class="h-full flex-auto">
+    <router-outlet></router-outlet>
+  </div>
+  <p-button label="Cambiar"
+            (onClick)="toggleDark()" />
+</div>
