@@ -16,7 +16,21 @@
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
-    "module": "ES2022"
+    "module": "ES2022",
+    "paths": {
+      "@modulos/*": [
+        "./src/app/compartidos/modulos/*"
+      ],
+      "@servicios/*": [
+        "./src/app/compartidos/servicios/*"
+      ],
+      "@componentes/*": [
+        "./src/app/compartidos/componentes/*"
+      ],
+      "@vistas/*": [
+        "./src/app/vistas/*"
+      ],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
